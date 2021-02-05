@@ -3,7 +3,7 @@ terraform {
 
     bucket = "ScaleReal-DevopsTest"
     key = "terraform.tfstate"
-    region = "us-east-2"
+    region = "${var.region}"
     encrypt = true
   }
 }
@@ -29,7 +29,7 @@ module "Lambda" {
   API_execution = "${module.API_Gateway.ScaleReal_API}"
   timeout = "${var.timeout}"
   runtime = "${var.runtime}"
-  handler_name = "write_to_dynamodb.handler"
+  handler_name = "${var.handler_name}"
 }
 
 module "Role" {

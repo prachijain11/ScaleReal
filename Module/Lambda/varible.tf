@@ -21,5 +21,5 @@ variable "S3_id" {
 }
 
 variable "S3_name" {
-  description = "S3 bucket name for Lambda function"
+  description = "S3 bucket arn for Lambda function"
 }

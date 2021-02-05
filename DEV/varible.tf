@@ -10,3 +10,7 @@ variable "runtime" {
   description = "Runtime of Lambda function"
 }
 
+variable "handler_name" {
+  description = "Handler name of the Lambda function"
+}
+
