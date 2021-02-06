@@ -5,7 +5,7 @@ resource "aws_lambda_function" "ScaleReal_lambda" {
   runtime          = "${var.runtime}"
   timeout          = "${var.timeout}"
   filename         = "${var.handler_name}"
-  source_code_hash = "${base64sha256(file("${var.handler_name}"))}"
+  #source_code_hash = "${base64sha256(file("${var.handler_name}"))}"
 }
 
 resource "aws_lambda_permission" "APIPermission" {

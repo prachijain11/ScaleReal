@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "ScaleReal-DevopsTest" {
-  bucket = "ScaleReal-DevopsTest"
+  bucket = "scalereal-devopstest"
   acl    = "private"
   tags = {
-    Name        = "ScaleReal-DevopsTest"
+    Name        = "scalereal-devopstest"
     Environment = "Dev"
   }
 }

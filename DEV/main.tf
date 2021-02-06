@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
 
-    bucket = "ScaleReal-DevopsTest"
+    bucket = "scalereal-devopstest"
     key = "terraform.tfstate"
-    region = "${var.region}"
+    region = "us-east-2"
     encrypt = true
   }
 }

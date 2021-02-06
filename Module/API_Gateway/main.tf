@@ -50,5 +50,5 @@ resource "aws_api_gateway_integration" "readInt" {
 resource "aws_api_gateway_deployment" "apideploy" {
   depends_on = [ aws_api_gateway_integration.writeInt, aws_api_gateway_integration.readInt]
   rest_api_id = aws_api_gateway_rest_api.ScaleReal_API.id
-  stage_name  = "Prod"
+  stage_name  = "DEV"
 }
