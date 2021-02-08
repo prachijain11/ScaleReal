@@ -14,7 +14,10 @@ provider "aws" {
 
 module "API_Gateway" {
   source = "../Module/API_Gateway"
-  lambda_uri = "${module.Lambda.ScaleReal_lambda}"
+  lambda_uri_create = "${module.Lambda.lambda_create}"
+  lambda_uri_read = "${module.Lambda.lambda_read}"
+  lambda_uri_update = "${module.Lambda.lambda_update}"
+  lambda_uri_delete = "${module.Lambda.lambda_delete}"
 }
 
 module "DynamoDB" {
@@ -30,6 +33,10 @@ module "Lambda" {
   timeout = "${var.timeout}"
   runtime = "${var.runtime}"
   handler_name = "${var.handler_name}"
+  handler_name_create = "${var.handler_name_create}"
+  handler_name_read = "${var.handler_name_read}"
+  handler_name_update = "${var.handler_name_update}"
+  handler_name_delete = "${var.handler_name_delete}"
 }
 
 module "Role" {
